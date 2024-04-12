@@ -1,0 +1,54 @@
+.cast-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .cast-wrapper:last-child {
+    display: none;
+  }
+}
+
+.cast-img-wrapper {
+  width: 75px;
+  height: 75px;
+}
+
+.cast-img-wrapper img {
+  mask-image: url("/public/cast-mask.png");
+  mask-position: center;
+  mask-size: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cast-wrapper h3 {
+  padding-inline: 10px;
+  padding-block: 3px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(57, 29, 29);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.cast-wrapper h3:first-child {
+  background-color: rgba(136, 0, 0, 0.4);
+}
+
+.cast-wrapper h3:last-child {
+  background-color: rgba(213, 142, 0, 0.4);
+  margin-top: -5px;
+}
+
+.cast-as {
+  margin-top: -16px;
+  z-index: 5;
+  font-family: "architects daughter";
+  font-size: 20px;
+  color: rgb(231, 177, 0);
+}

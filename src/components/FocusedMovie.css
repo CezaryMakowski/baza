@@ -1,0 +1,137 @@
+.focused-background {
+  position: fixed;
+  inset: 0;
+  padding: 40px 20px;
+  z-index: 100;
+}
+
+.focused-wrapper {
+  max-width: 700px;
+  width: 98vw;
+  max-height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, minmax(13%, 1fr));
+  grid-template-rows: repeat(2, minmax(auto, 1fr)) minmax(120px, 1fr);
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+  padding-left: 20px;
+  padding-top: 25px;
+  padding-right: 25px;
+}
+
+.focused-img {
+  border-radius: 15px;
+  height: auto;
+  background: antiquewhite;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.focused-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(114, 109, 140);
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(128, 128, 128, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  border: 1px solid rgba(140, 134, 134, 0.4);
+}
+
+.focused-container.movie-info-container {
+  text-align: center;
+  height: 95%;
+  min-height: auto;
+  grid-column: span 3;
+  transform-origin: right;
+  transform-origin: left;
+}
+
+.cast-container {
+  padding-block: 7px;
+
+  padding-right: 8px;
+  padding-left: 8px;
+  text-align: center;
+  grid-column: 1/-1;
+  transform-origin: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.movie-review-container {
+  padding: 25px;
+  grid-column: 1/-1;
+}
+
+.movie-review {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.star-container {
+  width: 85px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 110;
+  rotate: 10deg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.star {
+  width: 100%;
+}
+
+.star path:nth-child(1) {
+  fill: yellow;
+}
+
+.star path:nth-child(2) {
+  fill: hsl(60, 78%, 53%);
+}
+
+.star-container .movie-score {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  text-align: center;
+  font-family: "Luckiest Guy";
+  font-size: 50px;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  text-shadow: -2px 3px 0px rgb(0, 0, 0);
+}
+
+.movie-review::-webkit-scrollbar {
+  width: 8px;
+}
+
+.movie-review::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.movie-review::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10vh;
+}
+
+.movie-review::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.focused-wrapper::-webkit-scrollbar {
+  width: 0;
+}

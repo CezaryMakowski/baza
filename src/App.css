@@ -1,0 +1,59 @@
+.movies-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgb(74, 74, 74), rgb(28, 28, 28));
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 0.2fr));
+  gap: 25px;
+  align-items: end;
+  justify-content: center;
+  margin: 30px 30px;
+  grid-auto-flow: row dense;
+}
+
+.loading-wrapper {
+  width: 113px;
+  height: 113px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  fill: none;
+  stroke: aliceblue;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-dasharray: 251px;
+  stroke-dashoffset: 0;
+  animation: loading 1000ms ease-in-out infinite alternate,
+    spin 800ms linear infinite;
+}
+
+@keyframes loading {
+  to {
+    stroke-dashoffset: 251px;
+  }
+}
+
+@keyframes spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.error {
+  color: rgb(213, 213, 213);
+  text-shadow: 0 0 10px;
+  margin-inline: auto;
+  width: fit-content;
+  font-size: 35px;
+}

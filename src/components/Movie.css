@@ -1,0 +1,56 @@
+.movie-wrapper {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+  transition: scale 100ms ease-in-out;
+}
+
+.movie-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 99%;
+  height: 95%;
+  translate: -50% 50%;
+  transform: scaleY(0);
+  transform-origin: center;
+  background-color: white;
+  box-shadow: 0 0 30px -10px rgb(197, 206, 161);
+  transition: transform 150ms ease-in-out;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.movie-wrapper:hover {
+  scale: 1.05;
+}
+
+.movie-wrapper:hover::before {
+  transform: scaley(1);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.vote {
+  padding-top: 0.2em;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 2em;
+  height: 2.5em;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 87, 35, 1) 0%,
+    rgba(241, 5, 55, 1) 100%
+  );
+  border-radius: 0 10px 0 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+  color: white;
+}
